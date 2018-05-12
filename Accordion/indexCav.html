@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Javo</title>
+
+    
+    <style type="text/css">
+    	
+    	.accordion{
+
+    	     background-color:red;
+    	     width:100px;
+           float: left;
+           height:260px;
+           border:1px solid black;
+           margin-bottom:10px;
+           box-sizing: border-box;
+           user-select:none;
+    	}
+            
+        .accordion>h1{
+
+        	font-family: sans-serif;
+        	font-weight: bold;
+        	color:#fff;
+        	text-align: center;
+        	line-height:228px;
+        }    
+
+    	.text{
+
+    		width:300px;
+    		background-color: blue;
+    		color:white;
+    		float: left;
+    		padding:15px;
+    		text-align: center;
+    		font-family: sans-serif;
+    		font-weight: bold;
+    		height:230px;
+    		display: none;
+    		background-image: url("./img/volki.png");
+    		background-repeat: no-repeat;
+    		background-size: cover;
+    		background-position: right;
+            
+            
+    	}
+
+    </style>
+
+</head>
+<body>
+  
+  <div class="accordion">
+  	<h1>1</h1>
+  	</div>
+  	<div class="text">
+  		
+  	</div>
+  	<div class="clear"></div>
+  
+
+  
+    <div class="accordion">
+    	<h1>2</h1>
+    </div>
+  	<div class="text">
+  		
+  	</div>
+  	<div class="clear"></div>
+  
+
+
+    <div class="accordion">
+    	<h1>3</h1>
+    </div>
+
+  	<div class="text">
+  		
+  	</div>
+
+  	<div class="clear"></div>
+  
+  
+  <script type="text/javascript">
+
+  	 var divim = document.getElementsByClassName("accordion");
+
+  	 var divim2 = document.getElementsByClassName("text");
+
+
+
+     for(var i = 0; i < divim.length; i++){
+
+          console.log(divim[i]);
+          
+          divim[i].addEventListener("click",function(){
+
+          	 var panel = this.nextElementSibling;
+          	 console.log(panel);
+
+          	  if (panel.style.display === "none") {
+                  
+                  panel.style.display = "block";
+          	  }
+          	  else{
+
+          	  	panel.style.display = "none";
+          	  }
+
+          })
+     }
+
+
+  	
+
+
+  	 
+  </script>
+
+</body>
+</html>
